@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Grocery Price Checker</title>
+    <link rel="stylesheet" href="eexhlpe.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 Mini Grocery Price Checker</h1>
+    </header>
+
+    <main>
+
+        <form>
+
+            <!-- PRODUCT INFORMATION -->
+            <fieldset>
+                <legend>Product Information</legend>
+
+                <!-- Product Selection -->
+                <label for="product">Select Product:</label>
+                <select id="product" name="product" required>
+                    <option value="">-- Choose Product --</option>
+                    <option>Rice (per kilo)</option>
+                    <option>Eggs (per tray)</option>
+                    <option>Bread (per loaf)</option>
+                    <option>Milk (per bottle)</option>
+                    <option>Instant Noodles (per pack)</option>
+                </select>
+
+                <!-- Quantity Input -->
+                <label for="quantity">Quantity:</label>
+                <input 
+                    type="number" 
+                    id="quantity" 
+                    name="quantity" 
+                    min="1" 
+                    placeholder="Enter quantity"
+                    required>
+
+                <!-- Notes -->
+                <label for="notes">Notes (Optional):</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Brand, size, or extra information..."></textarea>
+
+                <!-- File Upload -->
+                <label for="file">Upload Product Image (Optional):</label>
+                <input type="file" id="file" name="file" accept=".jpg, .png, .jpeg">
+            </fieldset>
+
+            <!-- BUTTONS -->
+            <div class="button-group">
+                <input type="submit" value="Check Price">
+                <input type="reset" value="Clear Form">
+                <input type="button" value="Help">
+            </div>
+
+        </form>
+
+        <!-- STATIC RESULT PREVIEW (No JavaScript) -->
+        <section class="result-box">
+            <h2>Estimated Price Preview</h2>
+
+            <p><strong>Product:</strong> —</p>
+            <p><strong>Quantity:</strong> —</p>
+            <p><strong>Estimated Price:</strong> —</p>
+            <p><strong>Notes:</strong> —</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by: Your Name | Date</p>
+    </footer>
+
+</body>
+</html>
